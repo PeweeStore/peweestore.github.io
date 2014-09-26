@@ -18,7 +18,8 @@
     <!-- Custom styles for this template -->
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
     <!-- Custom CSS -->
     <!--<link rel="stylesheet" href="/css/main.css">-->
 
@@ -51,6 +52,8 @@
     </div>
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
+        <li class="active"><a href="/">HOME</a></li>
+        <li ><a href="/features.html">FEATURES</a></li>
         <!-- <li class="active"><a href="/">HOME</a></li> -->
         <!-- <li ><a href="/blog/">BLOG</a></li>
         <li ><a href="/portfolio/">PORTFOLIO</a></li>
@@ -61,7 +64,11 @@
   </div>
 </div>
 
-          <div id="homecover">
+          <div id="homecover-background">
+
+</div>
+<div id="homecover">
+
   <div id="homecover-inner">
     <div id="homecover-wrap">
       <div id="homecover-header">
@@ -76,7 +83,7 @@
       </div>
       <br/>
       <div id="homecover-footer">
-        <h2><a href="https://github.com/peweestore/pewee"> More informations</a></h2>
+        <h2><a href="features.html"> More informations</a></h2>
       </div>
     </div>
   </div>
@@ -84,7 +91,7 @@
 
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/retina-1.1.0.js"></script>
 <script>
@@ -95,6 +102,17 @@
 
   ga('create', 'UA-54800663-1', 'auto');
   ga('send', 'pageview');
+
+  function goToAnchorAnimated(object) {
+    $(object).click(function(){
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 500);
+        return false;
+    });
+  }
+
+  
 
 </script>
 
